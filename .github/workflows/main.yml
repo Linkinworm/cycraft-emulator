@@ -4,11 +4,11 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Compile
         run: gcc cycraft-windows.c -o cycraft_emu.exe -lws2_32
       - name: Upload result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cycraft-emulator-exe
           path: cycraft_emu.exe
